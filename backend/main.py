@@ -254,5 +254,4 @@ def eliminar_socio(
     return {
         "mensaje": f"Socio {numero_socio} eliminado"
     }
-```
 
