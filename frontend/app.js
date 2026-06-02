@@ -73,7 +73,7 @@ btnLogout.addEventListener("click", () => {
  *************************************************/
 async function cargarSocios() {
 
-    const res = await fetch("http://127.0.0.1:8000/socios");
+    const res = await fetch("https://club-app-backend-ocs2.onrender.com/socios");
     const data = await res.json();
 
     sociosCache = data;
@@ -148,7 +148,7 @@ function activarBotones() {
 
             if (!confirm(`¿Eliminar socio ${id}?`)) return;
 
-            await fetch(`http://127.0.0.1:8000/socios/${id}`, {
+            await fetch(`https://club-app-backend-ocs2.onrender.com/socios/${id}`, {
                 method: "DELETE"
             });
 
@@ -210,7 +210,7 @@ btnGuardar.addEventListener("click", async () => {
     // EDITAR
     if (editandoId) {
 
-        await fetch(`http://127.0.0.1:8000/socios/${editandoId}`, {
+        await fetch(`https://club-app-backend-ocs2.onrender.com/socios/${editandoId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nombre, apellido, dni, fecha_nacimiento: fecha })
@@ -222,7 +222,7 @@ btnGuardar.addEventListener("click", async () => {
     // CREAR
     else {
 
-        await fetch("http://127.0.0.1:8000/socios", {
+        await fetch("https://club-app-backend-ocs2.onrender.com/socios", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nombre, apellido, dni, fecha_nacimiento: fecha })
