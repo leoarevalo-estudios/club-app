@@ -1,0 +1,325 @@
+/* ========================= */
+/* RESET Y BASE */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* ========================= */
+/* PANTALLA INICIO */
+/* ========================= */
+
+#pantalla-inicio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.blanco { color: white; }
+.verde  { color: #00ff88; }
+
+/* ========================= */
+/* LOGIN */
+/* ========================= */
+
+#pantalla-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    background: #111;
+    border: 1px solid #222;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+.login-box button {
+    background: #00ff88;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    opacity: 0.9;
+}
+
+/* ========================= */
+/* TOPBAR */
+/* ========================= */
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #111;
+}
+
+.topbar button {
+    background: #111;
+    color: white;
+    border: 1px solid #222;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.topbar button:hover {
+    border-color: #00ff88;
+}
+
+/* ========================= */
+/* LAYOUT GENERAL DASHBOARD */
+/* ========================= */
+
+.contenido {
+    padding: 20px;
+}
+
+.panel-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* ========================= */
+/* BOTÓN NUEVO SOCIO */
+/* ========================= */
+
+#btn-nuevo {
+    background: #00ff88;
+    color: black;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* BUSCADOR */
+/* ========================= */
+
+#buscador {
+    width: 220px;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: white;
+}
+
+#buscador:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+/* ========================= */
+/* TABLA CONTENEDOR */
+/* ========================= */
+
+.tabla {
+    background: #0b0b0b;
+    border: 1px solid #111;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#lista-socios {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ========================= */
+/* HEADER TABLA */
+/* ========================= */
+
+.tabla-header {
+    display: grid;
+    grid-template-columns:
+        90px   /* Nº */
+        220px  /* Nombre */
+        140px  /* DNI */
+        70px   /* Edad */
+        160px  /* Fecha */
+        1fr;   /* Acciones */
+
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 12px 10px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #00ff88;
+
+    color: #00ff88;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.tabla-header div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+/* ========================= */
+/* FILAS DE SOCIOS */
+/* ========================= */
+
+.socio-row {
+    display: grid;
+    grid-template-columns:
+        90px   /* Nº */
+        220px  /* Nombre */
+        140px  /* DNI */
+        70px   /* Edad */
+        160px  /* Fecha */
+        1fr;   /* Acciones */
+
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 12px 10px;
+    border-bottom: 1px solid #111;
+}
+
+/* celdas */
+.col {
+    color: white;
+    font-size: 14px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-align: left;
+}
+
+/* acciones */
+.col.acciones {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ========================= */
+/* FORMULARIO SOCIO */
+/* ========================= */
+
+.form-socio {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background: #0b0b0b;
+    padding: 15px;
+
+    border: 1px solid #111;
+    border-radius: 10px;
+}
+
+.form-socio input {
+    background: #111;
+    border: 1px solid #222;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-socio input:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+/* ========================= */
+/* BOTONES ACCIONES */
+/* ========================= */
+
+.btn-eliminar {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background: #ff4d4d;
+    color: black;
+}
+
+.btn-editar {
+    background: transparent;
+    border: 1px solid #c8ff00;
+    color: #c8ff00;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background: #c8ff00;
+    color: black;
+}

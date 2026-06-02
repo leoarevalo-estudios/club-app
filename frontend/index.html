@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>club.app</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- PANTALLA INICIO -->
+    <!-- ========================= -->
+    <div id="pantalla-inicio">
+        <h1>
+            <span class="blanco">club</span><span class="verde">.app</span>
+        </h1>
+    </div>
+
+    <!-- ========================= -->
+    <!-- LOGIN -->
+    <!-- ========================= -->
+    <div id="pantalla-login" class="oculto">
+        <div class="login-box">
+
+            <h2>
+                <span class="blanco">club</span><span class="verde">.app</span>
+            </h2>
+
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+
+            <button id="btn-login">Ingresar</button>
+
+        </div>
+    </div>
+
+    <!-- ========================= -->
+    <!-- DASHBOARD -->
+    <!-- ========================= -->
+    <div id="dashboard" class="oculto">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+            <h2>
+                <span class="blanco">club</span><span class="verde">.app</span>
+            </h2>
+
+            <button id="btn-logout">Salir</button>
+        </div>
+
+        <!-- CONTENIDO GENERAL -->
+        <div class="contenido">
+
+            <!-- ACCIONES (crear + buscar) -->
+            <div class="panel-acciones">
+
+                <button id="btn-nuevo">+ Nuevo socio</button>
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar número de socio..."
+                />
+
+            </div>
+
+            <!-- FORMULARIO -->
+            <div id="form-socio" class="oculto form-socio">
+
+                <h3>Datos del socio</h3>
+
+                <input id="nombre" placeholder="Nombre">
+                <input id="apellido" placeholder="Apellido">
+                <input id="dni" placeholder="DNI">
+                <input type="date" id="fecha">
+
+                <button id="btn-guardar">Guardar</button>
+
+            </div>
+
+            <!-- TABLA -->
+            <div class="tabla">
+
+                <h3>Socios</h3>
+
+                <!-- HEADER TABLA -->
+                <div class="tabla-header">
+                    <div>Nº DE SOCIO</div>
+                    <div>NOMBRE</div>
+                    <div>DNI</div>
+                    <div>EDAD</div>
+                    <div>FECHA DE NACIMIENTO</div>
+                    <div>ACCIONES</div>
+                </div>
+
+                <!-- LISTADO -->
+                <div id="lista-socios">
+                    <!-- render JS -->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
