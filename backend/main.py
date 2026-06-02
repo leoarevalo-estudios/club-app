@@ -18,6 +18,10 @@ from fastapi import Depends
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"mensaje": "Backend ok"}
+    
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # en desarrollo está OK
